@@ -1,0 +1,17 @@
+name: week1
+
+library:
+  exposed-modules:
+    - Checksum
+    - Hanoi
+  source-dirs: src
+  dependencies: base
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week1
+      - hspec

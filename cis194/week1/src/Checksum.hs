@@ -1,4 +1,4 @@
-module Checksum where
+module Checksum (validate) where
 
 import Data.List (reverse)
 
