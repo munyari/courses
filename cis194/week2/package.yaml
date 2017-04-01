@@ -1,0 +1,17 @@
+name: week2
+
+library:
+  exposed-modules:
+    - LogAnalysis
+    - Log
+  source-dirs: src
+  dependencies: base
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week2
+      - hspec
