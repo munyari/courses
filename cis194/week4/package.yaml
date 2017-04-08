@@ -1,0 +1,21 @@
+name: week4
+
+library:
+  exposed-modules:
+    - Fun
+    - FoldTree
+    - Xor
+    - MyFoldl
+    - Sieve
+    - Map
+  source-dirs: src
+  dependencies: base
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week4
+      - hspec
