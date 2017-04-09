@@ -1,0 +1,19 @@
+name: week5
+
+library:
+  exposed-modules:
+    - Calc
+    - ExprT
+    - Parser
+    - StackVM
+  source-dirs: src
+  dependencies: base, containers
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week5
+      - hspec
