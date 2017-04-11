@@ -1,0 +1,17 @@
+name: week6
+
+library:
+  exposed-modules:
+    - Fibonacci
+    - Stream
+  source-dirs: src
+  dependencies: base, containers
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week5
+      - hspec
