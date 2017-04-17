@@ -1,0 +1,22 @@
+name: week7
+
+library:
+  exposed-modules:
+    - Buffer
+    - Editor
+    - JoinList
+    - Scrabble
+    - Sized
+    - StringBufEditor
+    - StringBuffer
+  source-dirs: src
+  dependencies: base, containers, mtl
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week7
+      - hspec
