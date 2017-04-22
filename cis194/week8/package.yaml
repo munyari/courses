@@ -1,0 +1,17 @@
+name: week8
+
+library:
+  exposed-modules:
+    - Party
+    - Employee
+  source-dirs: src
+  dependencies: base, containers, mtl
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week8
+      - hspec
