@@ -72,14 +72,13 @@ instance Buffer (JoinList (Score, Size) String) where
     toString (Single _ s) = s
     toString (Append _ l r) = toString l ++ toString r
 
-    fromString s = Single (scoreString s, 1) s
+    fromString = foldr ((+++) . (\s -> Single (scoreString s, 1) s)) Empty . lines
 
-    line n b = listToMaybe $ jlToList $ dropJ n b
+    line = indexJ
 
     replaceLine n s b = takeJ n b +++ fromString s +++ dropJ (n+1) b
 
-    numLines Empty = 0
-    numLines jl = getSize $ size $ snd $ tag jl
+    numLines = getSize . size . snd . tag
 
     value = getScore . fst . tag
         where getScore (Score n) = n
