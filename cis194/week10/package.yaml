@@ -1,0 +1,16 @@
+name: week10
+
+library:
+  exposed-modules:
+    - AParser
+  source-dirs: src
+  dependencies: base, containers, mtl
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week10
+      - hspec
