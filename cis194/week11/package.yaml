@@ -1,0 +1,17 @@
+name: week11
+
+library:
+  exposed-modules:
+    - AParser
+    - SExpr
+  source-dirs: src
+  dependencies: base, containers, mtl
+
+tests:
+  test:
+    main: Test.hs
+    source-dirs: test
+    dependencies:
+      - base
+      - week11
+      - hspec
